@@ -33,3 +33,12 @@ public abstract void draw();
 Example:
 public interface Drawable{
 void draw();
+
+What is encapsulation?
+
+
+1. -Encapsulation means wrapping data and coding into single unit..
+2. -Technically Encapsulation,the variables or data of the class hidden from other class ,it can be accessed   through member function of its own class.
+3. -Encapsulation mostly defined with getter and setter method.
+1. Declaring instance variable of class as private so that it cannot be accessed directly by anyone from outside the class.
+2. Provide the public setter and getter methods in the class to set/modify the value of variable.
