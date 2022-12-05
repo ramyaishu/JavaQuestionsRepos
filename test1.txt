@@ -1,0 +1,7 @@
+What is synchronization in Selenium?
+
+Synchronization has a very vital role to play in automation. Code execution and application need to be in sync to perform the operation. If the application slows down for any reasons like network, heavy load, etc then the code keeps on checking for the particular web element.
+Synchronization issues occur when operations are performed on a web element that is not yet present in the DOM, or it is not a state to accept commands
+
+How to achieve synchronization?
+The WebDriver will wait for a specified implicit wait time and it will not try to find the element again during the specified time period. Once the specified time limit is crossed, the webDriver will try to search the element once again for one last time.
