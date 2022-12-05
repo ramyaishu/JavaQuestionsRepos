@@ -42,3 +42,27 @@ What is encapsulation?
 3. -Encapsulation mostly defined with getter and setter method.
 1. Declaring instance variable of class as private so that it cannot be accessed directly by anyone from outside the class.
 2. Provide the public setter and getter methods in the class to set/modify the value of variable.
+
+Throw and Throws
+
+1.The throw and throws are the concepts of exception handling in Java where the throw keyword throws the exception explicitly from a method or a block of code, whereas the throws keyword is used in the signature of the method.
+2.The throw keyword is used to throw an exception explicitly. It can throw only one exception at a time.
+3.The throws keyword can be used to declare multiple exceptions, separated by a comma. Whichever exception occurs, if matched with the declared ones, is thrown automatically then.
+4.throw keyword cannot propagate checked exceptions. It is only used to propagate the unchecked Exceptions that are not checked using the throws keyword. throws keyword is used to propagate the checked Exceptions only. 
+
+Throw:
+
+try {
+            // double x=3/0;
+            throw new ArithmeticException();
+        }
+
+Throws:
+
+ public static void writeToFile() throws Exception
+    {
+        BufferedWriter bw = new BufferedWriter(
+            new FileWriter("myFile.txt"));
+        bw.write("Test");
+        bw.close();
+    }
