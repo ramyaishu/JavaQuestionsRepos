@@ -5,3 +5,31 @@ Synchronization issues occur when operations are performed on a web element tha
 
 How to achieve synchronization?
 The WebDriver will wait for a specified implicit wait time and it will not try to find the element again during the specified time period. Once the specified time limit is crossed, the webDriver will try to search the element once again for one last time.
+
+Difference between Abstract and Interface
+
+An interface is a reference type in Java. It is similar to class. It is a collection of abstract methods. A class implements an interface, thereby inheriting the abstract methods of the interface.
+
+
+Abstract class
+Interface
+1) Abstract class can have abstract and non-abstract methods.
+Interface can have only abstract methods. Since Java 8, it can have default and static methods also.
+2) Abstract class doesn't support multiple inheritance.
+Interface supports multiple inheritance.
+3) Abstract class can have final, non-final, static and non-static variables.
+Interface has only static and final variables.
+4) Abstract class can provide the implementation of interface.
+Interface can't provide the implementation of abstract class.
+5) The abstract keyword is used to declare abstract class.
+The interface keyword is used to declare interface.
+
+8) A Java abstract class can have class members like private, protected, etc.
+Members of a Java interface are public by default.
+9)Example:
+public abstract class Shape{
+public abstract void draw();
+}
+Example:
+public interface Drawable{
+void draw();
