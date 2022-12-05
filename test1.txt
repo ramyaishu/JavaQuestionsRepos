@@ -66,3 +66,45 @@ Throws:
         bw.write("Test");
         bw.close();
     }
+
+Exception Handling
+
+An exception is an event, which occurs during the execution of a program, that disrupts the normal flow of the program's instructions. Exceptions need to be handled because they break the normal flow of execution of a program. One of the important intentions of exception handling is to prevent this break and continue program execution.
+
+NoSuchElementException
+NoSuchWindowException
+NoSuchFrameException
+NoAlertPresentException
+InvalidSelectorException
+ElementNotVisibleException
+ElementNotSelectableException
+TimeoutException
+NoSuchSessionException
+StaleElementReferenceException
+
+NoSuchElementException: This exception is due to accessing an element which is not available on the page.
+
+Consider that in the below example, correct id for the text field was ‘firstfield’ but the tester incorrectly mentioned it as ‘fistfield’. In this case, WebDriver cannot locate the element and org.openqa.selenium.NoSuchElementException will be thrown
+
+driver.findElement(By.id("submit")).click();
+Exception Handling:
+ 
+try {
+driver.findElement(By.id("submit")).click();
+} catch (NoSuchElementException e)
+
+Avoiding-And-Handling: Try giving a wait command.
+
+Example: The wait command below waits 10 seconds for the presence of web element with id ‘submit’. Then it tries to click it. If the element is available but still the click fails, an exception is caught.
+
+try {
+WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+wait.Until(ExpectedConditions.presenceOfElementLocated(By.id("submit")));
+try {
+driver.findElement(By.id("submit")).click();
+} catch (WebDriverException e) {
+System.out.println(“An exceptional case.”);
+}
+} catch (TimeOutException e) {
+System.out.println(“WebDriver couldn’t locate the element”);
+}
